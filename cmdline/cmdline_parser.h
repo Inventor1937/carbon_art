@@ -615,7 +615,7 @@ template <typename TArg>
 typename CmdlineParser<TVariantMap, TVariantMapKey>:: template ArgumentBuilder<TArg>
 CmdlineParser<TVariantMap, TVariantMapKey>::CreateArgumentBuilder(
     CmdlineParser<TVariantMap, TVariantMapKey>::Builder& parent) {
-  return CmdlineParser<TVariantMap, TVariantMapKey>::ArgumentBuilder<TArg>(
+  return typename CmdlineParser<TVariantMap, TVariantMapKey>::ArgumentBuilder<TArg>(
       parent, parent.save_destination_);
 }
 
